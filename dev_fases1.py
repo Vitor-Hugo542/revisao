@@ -96,16 +96,19 @@ def listar_todas_as_ordens():
         print(f"Status: {ordem['status']}")
         print("-"* 45)
 
-    # Criação de menu
-    while True:
-        print("\n=== SISTEMAS OFICONA INTELIGENTE ===")   
-        opcao = input("Escolha uma opção: ")
-        if opcao == "1":
-            cadastar_ordem_serviço()
-        elif opcao == "2":
-            listar_todas_as_ordens()
-        elif opcao == "3":
-            print("Fechando o sistema. Até logo, meu caro!")
-            break
-        else:
-            print("Opção inválida! Tente outra vez")
+# Criação de menu
+while True:
+    print("\n=== SISTEMAS OFICONA INTELIGENTE ===")
+    print("1. Cadastrar nova ordem de serviço")
+    print("2. Listar ordens de serviço")
+    print("3. Sair do sistema")   
+    opcao = input("Escolha uma opção: ")
+    if opcao == "1":
+        cadastar_ordem_serviço()
+    elif opcao == "2":
+        listar_todas_as_ordens()
+    elif opcao == "3":
+        print("Fechando o sistema. Até logo, meu caro!")
+        break
+    else:
+        print("Opção inválida! Tente outra vez")
