@@ -20,13 +20,14 @@ print("Produtos disponíveis:", list(dicionario_precos.keys()))
 
 compra = input("Dígite o que deseja comprar ou dígite 'sair' para sair:").strip()
 
+total = 0
 while True:
-    for produtos in dicionario_precos:
-        if compra.lower() in dicionario_precos:
-            carrinho.append(compra)
-        compra = input(f"{compra} foi adicionado, deseja comprar algo mais? ou dígite 'sair' para sair:").strip()
-        if compra.lower() == 'sair':
-            for itens in carrinho:
-                total += dicionario_precos[itens]
-                print (total)
-            break
+    if compra.lower() in dicionario_precos:
+        carrinho.append(compra)
+    compra = input(f"{compra} foi adicionado, deseja comprar algo mais? ou dígite 'sair' para sair:").strip()
+    if compra.lower() == 'sair':
+        for itens in carrinho:
+            total += dicionario_precos[itens]
+            print (sum(total))
+        break
+    break
