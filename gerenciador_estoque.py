@@ -10,16 +10,14 @@ estoque ={
     "jabuticaba": 3
 }
 
-compra = input("Dígite o nome da fruta desejada: ")
+fruta = input("Dígite o nome da fruta desejada: ")
 
 total = 0
-for compra in estoque:
-    total += estoque[compra]
-
-
-if total > 5:
-    print("Estoque ok")
-elif total >= 1 or total <5:
-    print("Estoque abaixo, por favor REPOR!")
-else:
-    print()
+if fruta in estoque:
+        total += estoque[fruta]
+        if total > 5:
+            print("Estoque ok")
+        elif total >= 1 and total <=5:
+            print("Estoque abaixo, por favor REPOR!")
+        else:
+            print("Prduto ESGOTADO!!!")
